@@ -7,7 +7,7 @@ RUN  chmod 644 /etc/pacman.conf && chown root:root /etc/pacman.conf
 
 #Update system and install some packages
 RUN pacman -Syyu --noconfirm \
- && pacman -S --noconfirm --needed base-devel git wget nano sudo \
+ && pacman -S --noconfirm --needed base base-devel git wget nano sudo \
     openssh ccache iputils iproute2 jshon xdelta3 tree
 
 #Replace gcc with gcc-multilib
