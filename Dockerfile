@@ -37,5 +37,7 @@ RUN  \
   cd ./pacaur ; \
   sudo -u user makepkg -si --noconfirm --needed
 
+USER user
+
 # Default command
 CMD ["echo", "No default cmd set!"]
