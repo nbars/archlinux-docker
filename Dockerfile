@@ -25,16 +25,10 @@ RUN echo "%sudo ALL=(ALL) NOPASSWD: ALL" >> /etc/sudoers
 
 #install cower and pacaur
 RUN  \
-  sudo -u user gpg --keyserver hkp://p80.pool.sks-keyservers.net:80  --recv-keys 1EB2638FF56C0C53 ; \
   cd /tmp ; \
-  sudo -u user wget https://aur.archlinux.org/cgit/aur.git/snapshot/cower.tar.gz ; \
-  sudo -u user tar -xzf cower.tar.gz ; \
-  cd ./cower ; \
-  sudo -u user makepkg -si --noconfirm --needed ; \
-  cd .. ; \
-  sudo -u user wget https://aur.archlinux.org/cgit/aur.git/snapshot/pacaur.tar.gz ; \
-  sudo -u user tar -xzf pacaur.tar.gz ; \
-  cd ./pacaur ; \
+  sudo -u user wget https://aur.archlinux.org/cgit/aur.git/snapshot/pikaur.tar.gz ; \
+  sudo -u user tar -xzf pikaur.tar.gz ; \
+  cd ./pikaur ; \
   sudo -u user makepkg -si --noconfirm --needed
 
 USER user
