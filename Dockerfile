@@ -1,4 +1,4 @@
-FROM base/archlinux:latest
+FROM base/archlinux
 MAINTAINER Nils Bars <arch@nbars.de>
 
 COPY pacman.conf /etc/pacman.conf
@@ -23,7 +23,7 @@ RUN useradd -m -d /home/user -s /bin/bash user \
 #Enable sudo group
 RUN echo "%sudo ALL=(ALL) NOPASSWD: ALL" >> /etc/sudoers
 
-#install cower and pacaur
+#install cower and pikaur
 RUN  \
   cd /tmp ; \
   sudo -u user wget https://aur.archlinux.org/cgit/aur.git/snapshot/pikaur.tar.gz ; \
