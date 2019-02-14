@@ -1,4 +1,4 @@
-FROM base/archlinux
+FROM archlinux/base
 MAINTAINER Nils Bars <arch@nbars.de>
 
 COPY pacman.conf /etc/pacman.conf
